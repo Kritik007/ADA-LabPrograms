@@ -1,6 +1,4 @@
-#include <iostream>
-#include <conio.h>
-#include <stdlib.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
@@ -18,22 +16,22 @@ public:
 void Second()
 {
     system("cls");
-    cout << "    __  ___           __      __                   __   __  __ ___ __ __  __   __  ___ " << endl;
-    cout << "|_/|__)| | ||_/   /\\ / _  /\\ |__)|  | /\\ |     /| (__\\ |__)|__) | /  (_  /  \\ /__    /" << endl;
-    cout << "| \\| \\ | | || \\  /--\\\\__)/--\\| \\ |/\\|/--\\|__    |  __/ |__)|__) | \\____) \\__/ \\__)  / " << endl;
+    cout << "-------------------------------------------------------------------------------------------" << endl;
+    cout << "|                                KRITIK AGARWAL 19BBTCS067                                |" << endl;
+    cout << "-------------------------------------------------------------------------------------------" << endl;
 }
 
 void Sort::choice()
 {
     int k = 4;
     Second();
-    cout << "\n\n\t\t\t\t\tWELCOME TO SORTING METHODS WINDOW." << endl;
+    cout << "\n\n\t\t\t\tWELCOME TO SORTING METHODS WINDOW." << endl;
     cout << "\n\t\t\t\tWhich operation you want to perform?" << endl;
     while (k > 0)
     {
         cout << "\n\n\t\t\t\t-------------------------------------" << endl;
-        cout << "\n\t\t\t\t\t      Main Menu" << endl;
-        cout << "\n\t\t\t\t-------------------------------------" << endl;
+        cout << "\t\t\t\t\t      Main Menu" << endl;
+        cout << "\t\t\t\t-------------------------------------" << endl;
         cout << "\n\t\t\t\t1) Insertion Sort\n\t\t\t\t2) Merge Sort\n\t\t\t\t3) Quick Sort\n\t\t\t\tPress \"0\" to EXIT" << endl;
         cout << "\n\t\t\t\t-------------------------------------" << endl;
         cout << "\n\t\t\t\tEnter your choice: ";
@@ -42,13 +40,13 @@ void Sort::choice()
         {
         case 1:
             isort();
-            break;
+            return;
         case 2:
             msort();
-            break;
+            return;
         case 3:
             Qsort();
-            break;
+            return;
         case 0:
             exit(0);
         default:
@@ -62,8 +60,8 @@ void Sort::isort()
     int A[1000], a, b, c, tmp;
     Second();
     cout << "\n\n\t\t\t\t-------------------------------------" << endl;
-    cout << "\n\t\t\t\t  WELCOME TO INSERTION SORT WINDOW.\n";
-    cout << "\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\t\t\t\t  WELCOME TO INSERTION SORT WINDOW.\n";
+    cout << "\t\t\t\t-------------------------------------" << endl;
     cout << "\n\t\t\t\tEnter size of array: ";
     cin >> a;
     cout << "\n\t\t\t\tEnter array elements: ";
@@ -85,7 +83,7 @@ void Sort::isort()
         if (b < a - 1)
             cout << " , ";
     }
-    cout << "\n\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\n\t\t\t\t-------------------------------------";
 }
 
 void merge(int a[], int i1, int j1, int i2, int j2)
@@ -125,8 +123,8 @@ void Sort::msort()
     int a[30], n, i;
     Second();
     cout << "\n\n\t\t\t\t-------------------------------------" << endl;
-    cout << "\n\t\t\t\t    WELCOME TO MERGE SORT WINDOW.\n";
-    cout << "\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\t\t\t\t    WELCOME TO MERGE SORT WINDOW.\n";
+    cout << "\t\t\t\t-------------------------------------" << endl;
     cout << "\n\t\t\t\tEnter size of array: ";
     cin >> n;
     cout << "\n\t\t\t\tEnter array elements: ";
@@ -140,7 +138,7 @@ void Sort::msort()
         if (i < n - 1)
             cout << " , ";
     }
-    cout << "\n\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\n\t\t\t\t-------------------------------------";
 }
 
 void quicksort(int x[10], int ft, int lt)
@@ -175,8 +173,8 @@ void Sort::Qsort()
 {
     Second();
     cout << "\n\n\t\t\t\t-------------------------------------" << endl;
-    cout << "\n\t\t\t\t    WELCOME TO QUICK SORT WINDOW.\n";
-    cout << "\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\t\t\t\t    WELCOME TO QUICK SORT WINDOW.\n";
+    cout << "\t\t\t\t-------------------------------------" << endl;
     int x[20], size, i;
     cout << "\n\t\t\t\tEnter size of array: ";
     cin >> size;
@@ -191,17 +189,17 @@ void Sort::Qsort()
         if (i < size - 1)
             cout << " , ";
     }
-    cout << "\n\t\t\t\t-------------------------------------" << endl;
+    cout << "\n\t\t\t\t-------------------------------------";
 }
 
 int main()
 {
     Sort s;
     int a = 1;
-    while (a == 1)
+    do
     {
         s.choice();
-        cout << "\nEnter Any Number To Perform Sorting Again\nEnter 0 to exit";
+        cout << "\n\n\t\t\t\tEnter Any Number To Perform Sorting Again\n\t\t\t\tEnter 0 to Exit\n\t\t\t\t>>> ";
         cin >> a;
-    }
+    } while (a != 0);
 }
